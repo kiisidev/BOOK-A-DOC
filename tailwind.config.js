@@ -12,8 +12,8 @@ module.exports = {
        
       },
       fontFamily: {
-        QuickSand: ["QuickSand", "sans-serif"],
-      },
+        sora: ["Sora","sans-serif"]
+      }
     },
     screens: {
       xs: "480px",
