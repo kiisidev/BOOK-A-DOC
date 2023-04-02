@@ -1,0 +1,55 @@
+  
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@font-face {
+    font-family: Monda;
+    src: url(./assets/Monda-Regular.ttf);
+}
+html{
+    scroll-behavior: smooth;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Monda;
+}
+*::selection{
+    background-color: #7c7c7c;
+
+}
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #cccccc;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #313131;
+    border-radius: 20px;
+  }
+
+ 
+  
+
+  
+  html {
+    scrollbar-width: thin;
+  }
+  
+  html::-moz-scrollbar-thumb {
+    background-color: #313131;
+    border-radius: 20px;
+
+  }
+  
+  
+  
