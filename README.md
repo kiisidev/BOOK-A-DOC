@@ -1,14 +1,15 @@
-# Create React App
 
-This directory is a brief example of a [Create React App](https://github.com/facebook/create-react-app) site that can be deployed to Vercel with zero configuration.
+![BOOK-A-DOC logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyZTMuKIfKI-pS1ZwJE83TE92mq6fvoCs0PQ&usqp=CAU)
 
-## Deploy Your Own
+
+# BOOK A DOC
+
+This is a project for the ReactJS Devs 🇳🇬 Hackathon 5.0 
+
+## About
+Book a Doc is a highly convenient and user-friendly medical app that allows patients to easily book virtual appointments with experienced doctors who can attend to their medical needs. This app is designed to streamline the booking process and provide patients with a centralised platform to access a range of healthcare services.
 
 Deploy your own Create React App project with Vercel.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/create-react-app&template=create-react-app)
-
-_Live Example: https://create-react-template.vercel.app/_
 
 ## Available Scripts
 
