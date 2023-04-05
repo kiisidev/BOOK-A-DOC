@@ -8,7 +8,8 @@ module.exports = {
         primary: "#FFFFFF",
         dark: "#181818",
         hint: '#014DD5',
-        mid:"#D6DFE8"
+        midAsh:"#D6DFE8",
+        midWhite:"#ECEEF0"
        
       },
       fontFamily: {
