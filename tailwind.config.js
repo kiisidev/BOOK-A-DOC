@@ -8,6 +8,7 @@ module.exports = {
         primary: "#FFFFFF",
         dark: "#181818",
         hint: '#014DD5',
+        secondaryText:"#7E7E7E",
         midAsh:"#D6DFE8",
         midWhite:"#ECEEF0"
        

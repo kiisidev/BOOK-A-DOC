@@ -1,3 +1,4 @@
+import { stats } from "./data";
 import hero from "../assets/hero.png";
 import Navbar from "./Navbar";
 
@@ -6,18 +7,28 @@ export default function Header() {
     <header className=" w-full h-[100vh]  bg-midWhite">
       <div className="relative lg:left-10 right-10 ">
         <Navbar />
-        <section className="lg:flex lg:justify-between lg:items-center pt-24 ">
-          <div className="mt-5">
-            <p className="lg:text-[44px] leading-[48px] font-[400]">
+        <section className="lg:flex lg:justify-between lg:items-center pt-20 ">
+          <div>
+            <p className="lg:text-[44px] leading-[50px] font-[400]">
               Book appointments <br></br>with top
-              <span className="text-hint">specialists</span> at<br></br>
+              <span className="text-hint pl-2">specialists</span> at<br></br>
               <span className="text-hint"> hospitals</span> near you.
             </p>
             <button className="bg-hint px-5 py-3 rounded-3xl mt-3 text-white ">
               Book Appointment
             </button>
           </div>
-          <img src={hero} alt="Doctor" className="lg:w-[600px] mr-20" />
+          <div className="flex flex-col items-center">
+            <img src={hero} alt="Doctor" className="lg:w-[600px] mr-20" />
+            <div className="flex text-center mr-20 pt-3">
+              {stats.map((stat) => (
+                <span key={stat.num} className={`${stat.num < 3 ? "px-16" : "pl-8"}`}>
+                  <h2 className="text-5xl font-bold">{stat.value}</h2>
+                  <p className="text-secondaryText">{stat.title}</p>
+                </span>
+              ))}
+            </div>
+          </div>
         </section>
       </div>
     </header>
