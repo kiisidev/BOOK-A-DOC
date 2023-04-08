@@ -4,10 +4,10 @@ import Navbar from "./Navbar";
 
 export default function Header() {
   return (
-    <header className=" w-full h-[100vh]  bg-midWhite">
-      <div className="relative lg:left-10 right-10 ">
-        <Navbar />
-        <section className="lg:flex lg:justify-between lg:items-center pt-20 ">
+    <header className=" lg:w-full lg:h-[100vh]  bg-midWhite">
+      <Navbar />
+      <div className="relative lg:left-10 lg:right-10 ">
+        <section className="lg:flex lg:justify-between lg:items-center pt-36 ">
           <div>
             <p className="lg:text-[44px] leading-[50px] font-[400]">
               Book appointments <br></br>with top
@@ -19,10 +19,13 @@ export default function Header() {
             </button>
           </div>
           <div className="flex flex-col items-center">
-            <img src={hero} alt="Doctor" className="lg:w-[600px] mr-20" />
-            <div className="flex text-center mr-20 pt-3">
+            <img src={hero} alt="Doctor" className="lg:w-[500px] mr-20" />
+            <div className="flex text-center pr-20 pt-3">
               {stats.map((stat) => (
-                <span key={stat.num} className={`${stat.num < 3 ? "px-16" : "pl-8"}`}>
+                <span
+                  key={stat.num}
+                  className={`${stat.num < 3 ? "px-16" : "pl-8"}`}
+                >
                   <h2 className="text-5xl font-bold">{stat.value}</h2>
                   <p className="text-secondaryText">{stat.title}</p>
                 </span>

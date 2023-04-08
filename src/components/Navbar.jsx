@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <nav className=" lg:flex justify-between items-center fixed top-4 right-0 left-10 ">
+    <nav className=" lg:flex lg:justify-between lg:items-center fixed lg:w-full lg:bg-transparent backdrop-blur-lg border-b-[1px] border-b-white-300 z-50 p-4  ">
       <h2 className="text-2xl">BOOK-A-DOC</h2>
       <ul className="lg:flex ">
         <li className="mx-16 border-b-2 border-hint">Home</li>
