@@ -8,9 +8,7 @@ html{
     scroll-behavior: smooth;
 
 }
-body{
-  overflow-x: hidden;
-}
+/*  */
 
 *{
     padding: 0;
