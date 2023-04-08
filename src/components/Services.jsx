@@ -18,10 +18,10 @@ export default function Services() {
                   />
                 </div>
                 <div className="pl-5 pt-5">
-                  <h3 className="text-hint text-2xl font-medium">
+                  <h3 className="text-hint text-2xl ">
                     {process.title}
                   </h3>
-                  <p className="max-w-[230px]">{process.description}</p>
+                  <p className="max-w-[230px] text-secondaryText">{process.description}</p>
                 </div>
               </div>
             </div>

@@ -42,3 +42,19 @@ export const processes = [
     num: 3,
   },
 ];
+
+
+export const serviceLists = [
+    {
+        title: "Health care, we care, w con easy join",
+        num: 1
+    },
+    {
+        title: "Sabi top requested specialist boku",
+        num: 2
+    },
+    {
+        title: "Close mouth na death trap, talk now make we  sharperly help you.",
+        num: 3
+    }
+]
