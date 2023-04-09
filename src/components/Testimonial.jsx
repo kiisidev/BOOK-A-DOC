@@ -2,13 +2,13 @@ import { testimonials } from "./data";
 export default function Testimonial() {
   return (
     <section className="h-[100vh] bg-midAsh">
-      <h3 className="text-center pt-20 text-3xl font-medium ">
+      <h3 className="text-center pt-20 text-3xl font-medium max-w-xs mx-auto lg:max-w-none">
         See wetin our clients dey yarn
       </h3>
       <div className="flex justify-around pt-40 ">
         {testimonials.map((testimonial) => (
           <div key={testimonial.num}>
-            <div className="w-72 h-72 rounded-3xl bg-midWhite flex flex-col justify-center">
+            <div className="w-72 h-72 rounded-3xl bg-midWhite flex flex-col justify-center shadow-md">
               <div className=" flex justify-center">
                 <img
                   src={testimonial.pic}

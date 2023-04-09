@@ -3,12 +3,13 @@ import hero from "../assets/hero.png";
 import Navbar from "./Navbar";
 
 export default function Header() {
+
   return (
-    <header className=" w-full lg:h-[100vh]  bg-midWhite">
+    <header className="w-full h-auto lg:w-full lg:h-[100vh]  bg-midWhite">
       <Navbar />
-      <section className="lg:flex lg:justify-between lg:items-center pt-40 ">
-        <div className="pl-8">
-          <p className="lg:text-[44px] leading-[50px] font-[400]">
+      <section className=" flex-col-reverse  flex pt-32 lg:flex-row lg:justify-between lg:items-center lg:pt-32 ">
+        <div className=" p-8 mt-4 text-center lg:text-left lg:pl-8">
+          <p className=" text-2xl font-medium lg:text-[44px] lg:leading-[50px] lg:font-[400]">
             Book appointments <br></br>with top
             <span className="text-hint pl-2">specialists</span> at<br></br>
             <span className="text-hint"> hospitals</span> near you.
@@ -18,15 +19,17 @@ export default function Header() {
           </button>
         </div>
         <div className="flex flex-col items-center">
-          <img src={hero} alt="Doctor" className="lg:w-[600px]" />
-          <div className="flex text-center pr-20 pt-3">
+          <img src={hero} alt="Doctor" className=" px-4 lg:w-64 lg:w-[600px]" />
+          <div className="lg:flex pt-4 hidden lg:text-center lg:block lg:pr-20 lg:pt-3">
             {stats.map((stat) => (
               <span
                 key={stat.num}
-                className={`${stat.num < 3 ? "px-16" : "pl-8"}`}
+                className={`${stat.num < 3 ? "lg:px-16" : "  lg:pl-8"}`}
               >
-                <h2 className="text-5xl font-bold">{stat.value}</h2>
-                <p className="text-secondaryText">{stat.title}</p>
+                <h2 className=" lg:text-5xl font-bold">
+                  {stat.value}
+                </h2>
+                <p className="text-secondaryText ">{stat.title}</p>
               </span>
             ))}
           </div>

@@ -1,13 +1,13 @@
 import contact from "../assets/contact.webp";
 export default function Contact() {
   return (
-    <section className=" h-[100vh] bg-midWhite">
-      <h3 className="text-center relative top-16 pt-16 text-3xl font-medium ">
+    <section className=" lg:h-[100vh] bg-midWhite">
+      <h3 className="px-4 text-center relative top-16 pt-16 text-3xl font-medium ">
         For any any kain issue, you fit reach us
       </h3>
-      <div className="flex justify-around mt-40">
+      <div className="flex flex-col-reverse items-center lg:flex-row lg:justify-around mt-40">
         <aside> 
-          <form className="grid grid-cols-2">
+          <form className="grid grid-cols-2 p-8">
             <input
               type="text"
               name="name"
@@ -18,13 +18,13 @@ export default function Contact() {
               type="email"
               name="email"
               placeholder="Email"
-              className="w-48 h-16 rounded-xl border-[1px] mt-5 p-4 border-hint"
+              className=" lg:w-48 h-16 rounded-xl border-[1px] mt-5 p-4 border-hint"
             />
             <input
               type="text"
               name="number"
               placeholder="Phone Number"
-              className="w-48 h-16 rounded-xl border-[1px] mt-5 p-4 ml-4 border-hint"
+              className="lg:w-48 h-16 rounded-xl border-[1px] mt-5 p-4 ml-4 border-hint"
             />
             <input
               type="text"
