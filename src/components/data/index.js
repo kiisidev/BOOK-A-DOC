@@ -36,25 +36,47 @@ export const processes = [
   },
   {
     title: "Book Appointment",
-    description:
-      "Schedule an appointment with your selected specialist.",
+    description: "Schedule an appointment with your selected specialist.",
     icon: book,
     num: 3,
   },
 ];
 
-
 export const serviceLists = [
-    {
-        title: "Health care, we care, w con easy join",
-        num: 1
-    },
-    {
-        title: "Sabi top requested specialist boku",
-        num: 2
-    },
-    {
-        title: "Close mouth na death trap, talk now make we  sharperly help you.",
-        num: 3
-    }
-]
+  {
+    title: "Health care, we care, w con easy join",
+    num: 1,
+  },
+  {
+    title: "Sabi top requested specialist boku",
+    num: 2,
+  },
+  {
+    title: "Close mouth na death trap, talk now make we  sharperly help you.",
+    num: 3,
+  },
+];
+
+export const testimonials = [
+  {
+    pic: doc,
+    name: "James Philip",
+    comment:
+      "I had an excellent experience during my medical consultation with Dr. Smith, he was extremely thorough",
+    num: 1,
+  },
+  {
+    pic: doc,
+    name: "John Nzai",
+    comment:
+      "I had an excellent experience during my medical consultation with Dr. Smith, he was extremely thorough and he was very attentive",
+    num: 2,
+  },
+  {
+    pic: doc,
+    name: "Sophie Oma",
+    comment:
+      "I had an excellent experience during my medical consultation with Dr. Smith, he was extremely thorough and was very professional",
+    num: 3,
+  },
+];

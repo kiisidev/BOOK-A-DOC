@@ -13,7 +13,7 @@ html{
 *{
     padding: 0;
     margin: 0;
-    font-family: Sora;
+    font-family: Sora "sans-serif";
     box-sizing: border-box;
 }
 

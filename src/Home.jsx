@@ -2,6 +2,7 @@ import Services from "./components/Services";
 import Header from "./components/Header";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Testimonial from "./components/Testimonial";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <Header />
       <Services />
       <About />
+      <Testimonial />
       <Contact />
     </>
   );

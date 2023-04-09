@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 export default function Header() {
   return (
-    <header className=" lg:w-full lg:h-[100vh]  bg-midWhite">
+    <header className=" w-full lg:h-[100vh]  bg-midWhite">
       <Navbar />
       <section className="lg:flex lg:justify-between lg:items-center pt-40 ">
         <div className="pl-8">

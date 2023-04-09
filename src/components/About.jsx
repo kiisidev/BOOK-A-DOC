@@ -14,7 +14,7 @@ export default function About() {
           </h2>
           <div className="pt-5">
             {serviceLists.map((serviceList) => (
-              <span className="flex items-center pt-6">
+              <span className="flex items-center pt-6" key={serviceList.num}>
                 <TickCircle size="32" color="#014dd5" variant="Outline" />
                 <h3 className="pl-2 text-xl max-w-md font-normal">
                   {serviceList.title}
@@ -24,7 +24,11 @@ export default function About() {
           </div>
         </aside>
         <aside className="mr-32">
-          <img src={nurse} alt="nurse" className="w-96 rounded-tl-[100px] rounded-br-[100px]  border-2 border-hint"/>
+          <img
+            src={nurse}
+            alt="nurse"
+            className="w-96 rounded-tl-[100px] rounded-br-[100px]  border-2 border-hint"
+          />
         </aside>
       </div>
     </section>
