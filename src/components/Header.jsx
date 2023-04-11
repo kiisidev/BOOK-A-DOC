@@ -19,8 +19,8 @@ export default function Header() {
           </button>
         </div>
         <div className="flex flex-col items-center">
-          <img src={hero} alt="Doctor" className=" px-4 lg:w-64 lg:w-[600px]" />
-          <div className="lg:flex pt-4 hidden lg:text-center lg:block lg:pr-20 lg:pt-3">
+          <img src={hero} alt="Doctor" className="  px-16 lg:w-[700px] " />
+          <div className="lg:flex pt-4 hidden lg:text-center lg:pr-20 lg:pt-3">
             {stats.map((stat) => (
               <span
                 key={stat.num}
