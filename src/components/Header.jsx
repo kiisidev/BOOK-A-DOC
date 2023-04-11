@@ -1,5 +1,5 @@
 import { stats } from "./data";
-import hero from "../assets/hero.png";
+import hero from "../assets/hero.svg";
 import Navbar from "./Navbar";
 
 export default function Header() {
