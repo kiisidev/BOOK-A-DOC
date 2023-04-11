@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header className="w-full h-auto lg:w-full lg:min-h-[100vh] bg-midWhite">
       <Navbar />
-      <section className="flex-col-reverse flex pt-32 pb-16 lg:flex-row lg:justify-between lg:items-center lg:pt-32 ">
+      <section className="flex-col-reverse flex pt-32 pb-16 lg:flex-row lg:justify-between lg:items-center lg:pt-40 ">
         <div className="p-8 mt-4 text-center lg:text-left lg:pl-8">
           <p className="text-2xl font-medium lg:text-[44px] lg:leading-[50px] lg:font-[400]">
             Book appointments <br></br>with top
@@ -19,7 +19,7 @@ export default function Header() {
           </button>
         </div>
         <div className="flex flex-col items-center">
-          <img src={hero} alt="Doctor" className="  px-16 lg:w-[700px] " />
+          <img src={hero} alt="Doctor" className="  px-16 lg:w-[600px] " />
           <div className="lg:flex pt-4 hidden lg:text-center lg:pr-20 lg:pt-3">
             {stats.map((stat) => (
               <span
