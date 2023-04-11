@@ -30,7 +30,7 @@ const Login = () => {
             <div className="mt-8">
                 <Button variant="contained" className="w-full" size="large">Login</Button>
             </div>
-            <p className='text-center mt-2 mb-8'>Don't have an account? <Link to='/register' className='text-blue-600'>Sign up</Link></p>
+            <p className='text-center mt-2 mb-8'>Don't have an account? <Link to='/register' className='text-hint'>Sign up</Link></p>
             </div>
 
         </div>
