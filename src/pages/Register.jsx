@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import doctorsvg from '../assets/icons/doctors.svg'
+import create from '../assets/icons/create.svg'
 import { TextField, Button, Checkbox } from '@mui/material';
 
 const Register = () => {
@@ -19,7 +19,7 @@ const Register = () => {
                 </div>
 
                 <div className="w-full flex justify-center">
-                    <img src={doctorsvg} alt="Doctor" className="max-h-72" />
+                    <img src={create} alt="Doctor" className="max-h-72" />
                 </div>
 
                 <h1 className="text-center font-semibold text-4xl my-4">Create a new account </h1>
