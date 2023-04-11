@@ -15,7 +15,7 @@ const Login = () => {
             </div>
 
             <div className="w-full flex justify-center">
-                <img src={doctorsvg} alt="Doctor" className="max-h-96"/>
+                <img src={doctorsvg} alt="Doctor" className="max-h-72"/>
             </div>
 
             <h1 className="text-center font-semibold text-4xl my-4">Welcome back 👋🏽</h1>
