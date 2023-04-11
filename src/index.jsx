@@ -12,6 +12,9 @@ const theme = createTheme({
       main: '#014DD5', // Custom primary color
     },
   },
+  typography:{
+    fontFamily:'Sora'
+  },
 });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
