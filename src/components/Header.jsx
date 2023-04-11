@@ -5,11 +5,11 @@ import Navbar from "./Navbar";
 export default function Header() {
 
   return (
-    <header className="w-full h-auto lg:w-full lg:h-[100vh]  bg-midWhite">
+    <header className="w-full h-auto lg:w-full lg:min-h-[100vh] bg-midWhite">
       <Navbar />
-      <section className=" flex-col-reverse  flex pt-32 lg:flex-row lg:justify-between lg:items-center lg:pt-32 ">
-        <div className=" p-8 mt-4 text-center lg:text-left lg:pl-8">
-          <p className=" text-2xl font-medium lg:text-[44px] lg:leading-[50px] lg:font-[400]">
+      <section className="flex-col-reverse flex pt-32 pb-16 lg:flex-row lg:justify-between lg:items-center lg:pt-32 ">
+        <div className="p-8 mt-4 text-center lg:text-left lg:pl-8">
+          <p className="text-2xl font-medium lg:text-[44px] lg:leading-[50px] lg:font-[400]">
             Book appointments <br></br>with top
             <span className="text-hint pl-2">specialists</span> at<br></br>
             <span className="text-hint"> hospitals</span> near you.
