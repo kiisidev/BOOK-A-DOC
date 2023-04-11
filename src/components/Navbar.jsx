@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { HambergerMenu, CloseCircle } from "iconsax-react";
+import { Link } from 'react-router-dom'
+
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
   const handleClick = () => {
@@ -36,12 +38,16 @@ export default function Navbar() {
         </li>
       </ul>
       <div className=" flex flex-col  lg:flex-row lg:relative lg:mr-16 ">
+        <Link to='/login'>
         <button className="bg-hint px-4 py-2 rounded-3xl text-primary lg:mr-4">
           Sign in
         </button>
+        </Link>
+        <Link to='/register'>
         <button className="bg-transparent px-4 py-2 border-2 border-hint my-4 rounded-3xl lg:my-0 ">
           Sign up
         </button>
+        </Link>
       </div>
      
     </nav></>
