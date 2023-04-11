@@ -51,6 +51,16 @@ html{
     border-radius: 20px;
 
   }
+  .mobile-nav {
+    top: 0;
+    left: -1200px; 
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .mobile-nav.open {
+    left: 0; /* slide in the navbar */
+  }
+  
   
   
   
