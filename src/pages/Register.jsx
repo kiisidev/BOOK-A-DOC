@@ -39,7 +39,7 @@ const Register = () => {
             <div className="mt-8">
                 <Button variant="contained" className="w-full" size="large">Sign up</Button>
             </div>
-            <p className='text-center mt-2 mb-8'>Already have an account? <Link to='/login' className='text-blue-600'>Login</Link></p>
+            <p className='text-center mt-2 mb-8'>Already have an account? <Link to='/login' className='text-hint'>Login</Link></p>
             </div>
 
         </div>
