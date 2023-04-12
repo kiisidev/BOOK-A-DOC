@@ -1,7 +1,9 @@
 import React from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import doctorsvg from '../assets/icons/doctors.svg'
-import { TextField, Button } from '@mui/material';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import FormControl from '@mui/material/FormControl';
 
 const Login = () => {
 
