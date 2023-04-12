@@ -125,7 +125,7 @@ const UserInfo = () => {
                         />
                     </div>
                     <div className="mt-4 mb-8">
-                        <Button variant="contained" className="w-full" size="large" endIcon={<Save />}>Next</Button>
+                        <Button variant="contained" className="w-full" size="large" endIcon={<Save />}>Save</Button>
                     </div>
                 </div>
 
