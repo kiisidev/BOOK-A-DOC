@@ -20,7 +20,7 @@ const Profile = () => {
                     <img src={create} alt="Doctor" className="max-h-72" />
                 </div>
 
-                <h1 className="text-center font-semibold text-4xl my-4">Setting up your profile </h1>
+                <h1 className="text-center font-semibold text-4xl my-4">Tell us a more about yourself</h1>
 
                 <div className="mx-auto max-w-lg">
                     <div className="mt-8">
@@ -36,9 +36,9 @@ const Profile = () => {
                         <TextField id="outlined-basic" type="text" label="Genotype" variant="outlined" className="w-full" />
                     </div>
                     <div className="mt-4 flex items-center justify-between">
-                        <p>Why do we need this information, <span className="text-hint">Learn more</span></p> <Button variant="text" endIcon={<SkipNext/>}>Skip</Button>
+                        <p>Why do we need this information, <span className="text-hint">Learn more</span></p> <Link to='/user-info'><Button variant="text" endIcon={<SkipNext/>}>Skip</Button></Link>
                     </div>
-                    <div className="mt-4">
+                    <div className="mt-4 mb-8">
                         <Button variant="contained" className="w-full" size="large" endIcon={<NavigateNext/>}>Next</Button>
                     </div>
                 </div>

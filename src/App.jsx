@@ -8,6 +8,7 @@ import {
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Profile from "./pages/Profile";
+import UserInfo from "./pages/UserInfo";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: <Profile/>,
+  },
+  {
+    path: "/user-info",
+    element: <UserInfo/>,
   },
 ]);
 function App() {
