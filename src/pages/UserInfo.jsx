@@ -83,53 +83,66 @@ const UserInfo = () => {
           Setting up your profile
         </h1>
 
-                <div className="mx-auto max-w-lg">
-                    <div className="mt-8">
-                        <FormControl fullWidth>
-                            <InputLabel id="demo-simple-select-label">State</InputLabel>
-                            <Select
-                                labelId="demo-simple-select-label"
-                                id="demo-simple-select"
-                                value={selectedState}
-                                label="State"
-                                onChange={handleSelectedState}
-                            >
-                                {stateMenuItems}
-                            </Select>
-                        </FormControl>
-                    </div>
-                    <div className="mt-8">
-                        <FormControl fullWidth>
-                            <InputLabel id="demo-simple-select-label">Cities</InputLabel>
-                            <Select
-                                labelId="demo-simple-select-label"
-                                id="demo-simple-select"
-                                value={selectedCity}
-                                label="State"
-                                onChange={handleSelectedCity}
-                            >
-                                {stateCitiesItems}
-                            </Select>
-                        </FormControl>
-                    </div>
-                    <div className="mt-8">
-                        <TextField id="outlined-basic" type="text" label="Allergies" variant="outlined" className="w-full" />
-                    </div>
-                    <div className="mt-8">
-                        <TextField
-                            id="outlined-multiline-flexible"
-                            label="Description"
-                            multiline
-                            rows={4}
-                            className="w-full"
-                        />
-                    </div>
-                    <div className="mt-4 mb-8">
-                        <Button variant="contained" className="w-full" size="large" endIcon={<Save />}>Save</Button>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    )
-}
+        <div className="mx-auto max-w-lg">
+          <div className="mt-8">
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label">State</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={selectedState}
+                label="State"
+                onChange={handleSelectedState}
+              >
+                {stateMenuItems}
+              </Select>
+            </FormControl>
+          </div>
+          <div className="mt-8">
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label">Cities</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={selectedCity}
+                label="State"
+                onChange={handleSelectedCity}
+              >
+                {stateCitiesItems}
+              </Select>
+            </FormControl>
+          </div>
+          <div className="mt-8">
+            <TextField
+              id="outlined-basic"
+              type="text"
+              label="Allergies"
+              variant="outlined"
+              className="w-full"
+            />
+          </div>
+          <div className="mt-8">
+            <TextField
+              id="outlined-multiline-flexible"
+              label="Description"
+              multiline
+              rows={4}
+              className="w-full"
+            />
+          </div>
+          <div className="mt-4 mb-8">
+            <Button
+              variant="contained"
+              className="w-full"
+              size="large"
+              endIcon={<Save />}
+            >
+              Save
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+export default UserInfo
