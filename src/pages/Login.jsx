@@ -1,13 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import doctorsvg from '../assets/icons/doctors.svg'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import FormControl from '@mui/material/FormControl';
+import useFetch from '../hooks/useFetch';
+import { endpoint } from '../utlis/endpoints';
+
 
 const Login = () => {
 
     const navigate = useNavigate()
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const settings = {
+        method:'post',
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, password })
+    }
+
+    const submit = async () =>{
+
+        try{
+            const res = await fetch(`${endpoint}/login`, settings)
+            const data = await res.json()
+            console.log(data)
+        }catch(err){
+            console.log(err)
+        }
+    }
+
+    
 
   return (
     <section className="bg-midWhite min-h-[100vh] px-4 py-4">
@@ -24,13 +50,13 @@ const Login = () => {
 
             <div className="mx-auto max-w-lg">
             <div className="mt-8">
-                <TextField id="outlined-basic" type="email" label="Email" variant="outlined" className="w-full"/>
+                <TextField id="outlined-basic-email" value={email} onChange={e => setEmail(e.target.value)} type="email" label="Email" variant="outlined" className="w-full"/>
             </div>
             <div className="mt-8">
-                <TextField id="outlined-basic" type="password" label="Password" variant="outlined" className="w-full" />
+                <TextField id="outlined-basic-password" value={password} onChange={e => setPassword(e.target.value)} type="password" label="Password" variant="outlined" className="w-full" />
             </div>
             <div className="mt-8">
-                <Button variant="contained" className="w-full" size="large">Login</Button>
+                <Button variant="contained" className="w-full" size="large" onClick={submit}>Login</Button>
             </div>
             <p className='text-center mt-2 mb-8'>Don't have an account? <Link to='/register' className='text-hint'>Sign up</Link></p>
             </div>
