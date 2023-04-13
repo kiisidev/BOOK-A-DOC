@@ -5,6 +5,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
 import { endpoint } from '../utlis/endpoints';
+import Snackbar from '@mui/material/Snackbar';
+import Slide from '@mui/material/Slide';
 import { toast as toasts } from 'react-toastify';
 
 const Login = () => {
@@ -17,8 +19,11 @@ const Login = () => {
     const [loading, setLoading] = useState(false)
     const [errors, setErrors] = useState(null)
 
+    const [toast, setToast] = useState({ show: false, message: '' })
+
     const settings = {
         method: 'post',
+        credentials:'include',
         headers: {
             'Content-Type': 'application/json'
         },
@@ -48,8 +53,12 @@ const Login = () => {
         }
     }
 
+    const handleClose = () => {
+    setToast(prev => ({...prev, show: false}));
+  };
 
     return (
+        <>
         <section className="bg-midWhite min-h-[100vh] px-4 py-4">
             <div className="max-w-3xl mx-auto">
                 <div className="py-0.5">
@@ -102,6 +111,15 @@ const Login = () => {
 
             </div>
         </section>
+        <Snackbar
+            autoHideDuration={3000}
+            open={toast.show}
+            onClose={handleClose}
+            TransitionComponent={Slide}
+            message={toast.message}
+            key={Slide.name}
+            />
+        </>
     )
 }
 
