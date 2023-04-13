@@ -4,6 +4,9 @@ import create from '../assets/icons/create.svg'
 import { TextField, Button, Checkbox } from '@mui/material';
 import { endpoint } from '../utlis/endpoints';
 import CircularProgress from '@mui/material/CircularProgress';
+import Snackbar from '@mui/material/Snackbar';
+import Slide from '@mui/material/Slide';
+import { toast as toasts } from 'react-toastify';
 
 const Register = () => {
 
@@ -21,6 +24,8 @@ const Register = () => {
 
     const [loading, setLoading] = useState(false)
     const [errors, setErrors] = useState(null)
+
+    const [toast, setToast] = useState({ show: false, message: '' })
 
     const settings = {
         method: 'post',
@@ -45,9 +50,13 @@ const Register = () => {
             console.log(data)
             if (data.success) {
                 console.log('Success', data)
+                setErrors(null)
+                toasts.success(data.success)
+                navigate('/login')
             } else {
                 console.log('Error', data)
                 setErrors(data.error)
+                setToast(prev => ({ ...prev, show: true, message: 'Stop breaking rules!'}))
             }
             setLoading(false)
 
@@ -56,6 +65,11 @@ const Register = () => {
             setLoading(false)
         }
     }
+
+    const handleClose = () => {
+    setToast(prev => ({...prev, show: false}));
+  };
+
 
     return (
         <>
@@ -108,7 +122,7 @@ const Register = () => {
                                 variant="outlined"
                                 className="w-full"
                                 helperText={errors?.email}
-                                error={errors?.confirm_password ? true : false}
+                                error={errors?.email ? true : false}
                             />
                         </div>
                         <div className="mt-8">
@@ -159,6 +173,14 @@ const Register = () => {
                 </div>
             </section>
 
+            <Snackbar
+                autoHideDuration={3000}
+                open={toast.show}
+                onClose={handleClose}
+                TransitionComponent={Slide}
+                message={toast.message}
+                key={Slide.name}
+            />
         </>
     )
 }
