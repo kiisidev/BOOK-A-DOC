@@ -80,8 +80,8 @@ const Register = () => {
               className="material-symbols-outlined cursor-pointer"
               onClick={() => navigate(-1)}
             >
-              {" "}
-              undo{" "}
+             
+              undo
             </span>
           </div>
 
@@ -90,7 +90,7 @@ const Register = () => {
           </div>
 
           <h1 className="text-center font-semibold text-4xl my-4">
-            Create a new account{" "}
+            Create a new account
           </h1>
 
           <div className="mx-auto max-w-md">
@@ -166,8 +166,8 @@ const Register = () => {
                 inputProps={{ "aria-label": "controlled" }}
               />
               <p>
-                I agree to the{" "}
-                <span className="text-hint">Terms of Service</span> and the{" "}
+                I agree to the
+                <span className="text-hint">Terms of Service</span> and the
                 <span className="text-hint">Privacy Policy</span>
               </p>
             </div>
@@ -179,7 +179,7 @@ const Register = () => {
               ) : (
                 <Button
                   variant="contained"
-                  className="w-full"
+                  className="w-full !py-4"
                   size="large"
                   onClick={submit}
                 >
@@ -188,7 +188,7 @@ const Register = () => {
               )}
             </div>
             <p className="text-center mt-2 mb-8">
-              Already have an account?{" "}
+              Already have an account?
               <Link to="/login" className="text-hint">
                 Login
               </Link>

@@ -105,7 +105,7 @@ const Login = () => {
             ) : (
               <Button
                 variant="contained"
-                className="w-full"
+                className="w-full !py-4"
                 size="large"
                 onClick={submit}
               >
