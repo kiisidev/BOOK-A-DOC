@@ -3,7 +3,6 @@ import hero from "../assets/hero.svg";
 import Navbar from "./Navbar";
 
 export default function Header() {
-
   return (
     <header className="w-full h-auto lg:w-full lg:min-h-[100vh] bg-midWhite">
       <Navbar />
@@ -26,9 +25,7 @@ export default function Header() {
                 key={stat.num}
                 className={`${stat.num < 3 ? "lg:px-16" : "  lg:pl-8"}`}
               >
-                <h2 className=" lg:text-5xl font-bold">
-                  {stat.value}
-                </h2>
+                <h2 className=" lg:text-5xl font-bold">{stat.value}</h2>
                 <p className="text-secondaryText ">{stat.title}</p>
               </span>
             ))}

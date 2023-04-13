@@ -145,4 +145,4 @@ const UserInfo = () => {
     </section>
   );
 };
-export default UserInfo
+export default UserInfo;
