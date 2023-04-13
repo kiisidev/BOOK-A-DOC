@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import profile from "../assets/icons/profile.svg";
+import create from "../assets/icons/create.svg";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import FormControl from "@mui/material/FormControl";
@@ -76,14 +76,14 @@ const UserInfo = () => {
         </div>
 
         <div className="w-full flex justify-center">
-          <img src={profile} alt="Doctor" className="max-h-72" />
+          <img src={create} alt="Doctor" className="max-h-72" />
         </div>
 
         <h1 className="text-center font-semibold text-4xl my-4">
           Setting up your profile
         </h1>
 
-        <div className="mx-auto max-w-md">
+        <div className="mx-auto max-w-lg">
           <div className="mt-8">
             <FormControl fullWidth>
               <InputLabel id="demo-simple-select-label">State</InputLabel>
@@ -133,7 +133,7 @@ const UserInfo = () => {
           <div className="mt-4 mb-8">
             <Button
               variant="contained"
-              className="w-full !py-4"
+              className="w-full"
               size="large"
               endIcon={<Save />}
             >
