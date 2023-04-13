@@ -58,8 +58,7 @@ const Login = () => {
             className="material-symbols-outlined cursor-pointer"
             onClick={() => navigate(-1)}
           >
-            {" "}
-            undo{" "}
+            undo
           </span>
         </div>
 
@@ -71,7 +70,7 @@ const Login = () => {
           Welcome back 👋
         </h1>
 
-        <div className="mx-auto max-w-lg">
+        <div className="mx-auto max-w-md">
           <div className="mt-8">
             <TextField
               id="outlined-basic-email"
@@ -80,7 +79,7 @@ const Login = () => {
               type="email"
               label="Email"
               variant="outlined"
-              className="w-full"
+              className="w-full "
               helperText={errors?.email}
               error={errors?.email ? true : false}
             />
@@ -115,7 +114,7 @@ const Login = () => {
             )}
           </div>
           <p className="text-center mt-2 mb-8">
-            Don't have an account?{" "}
+            Don't have an account?
             <Link to="/register" className="text-hint">
               Sign up
             </Link>

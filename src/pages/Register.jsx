@@ -93,7 +93,7 @@ const Register = () => {
             Create a new account{" "}
           </h1>
 
-          <div className="mx-auto max-w-lg">
+          <div className="mx-auto max-w-md">
             <div className="mt-8">
               <TextField
                 id="first-name"
