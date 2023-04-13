@@ -8,14 +8,6 @@ import { endpoint } from '../utlis/endpoints';
 import Snackbar from '@mui/material/Snackbar';
 import Slide from '@mui/material/Slide';
 import { toast as toasts } from 'react-toastify';
-import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import doctorsvg from "../assets/icons/doctors.svg";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import CircularProgress from "@mui/material/CircularProgress";
-import { endpoint } from "../utlis/endpoints";
-import { toast as toasts } from "react-toastify";
 
 const Login = () => {
 
