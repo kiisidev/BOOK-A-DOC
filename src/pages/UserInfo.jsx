@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import create from "../assets/icons/create.svg";
+import profile from "../assets/icons/profile.svg";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import FormControl from "@mui/material/FormControl";
@@ -76,7 +76,7 @@ const UserInfo = () => {
         </div>
 
         <div className="w-full flex justify-center">
-          <img src={create} alt="Doctor" className="max-h-72" />
+          <img src={profile} alt="Doctor" className="max-h-72" />
         </div>
 
         <h1 className="text-center font-semibold text-4xl my-4">
@@ -133,7 +133,7 @@ const UserInfo = () => {
           <div className="mt-4 mb-8">
             <Button
               variant="contained"
-              className="w-full"
+              className="w-full !py-4"
               size="large"
               endIcon={<Save />}
             >
