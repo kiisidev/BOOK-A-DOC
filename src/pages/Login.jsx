@@ -20,6 +20,7 @@ const Login = () => {
 
   const settings = {
     method: "post",
+    withCredentials: true,
     headers: {
       "Content-Type": "application/json",
     },
@@ -35,7 +36,7 @@ const Login = () => {
         console.log("Success", data);
         setErrors(null);
         toasts.success(data.success);
-        // navigate('/login')
+        navigate('/login')
       } else {
         console.log("Error", data);
         setErrors(data.error);
