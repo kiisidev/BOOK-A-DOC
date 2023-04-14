@@ -166,20 +166,19 @@ const Register = () => {
                 inputProps={{ "aria-label": "controlled" }}
               />
               <p>
-                I agree to the
-                <span className="text-hint">Terms of Service</span> and the
-                <span className="text-hint">Privacy Policy</span>
+                I agree to the <span className="text-hint"> Terms of Service </span> and the 
+                <span className="text-hint"> Privacy Policy </span>
               </p>
             </div>
             <div className="mt-4">
               {loading ? (
-                <Button variant="contained" className="w-full" size="large">
+                <Button variant="contained" className="w-full !py-3" size="large">
                   <CircularProgress size={26} sx={{ color: () => "#fff" }} />
                 </Button>
               ) : (
                 <Button
                   variant="contained"
-                  className="w-full !py-4"
+                  className="w-full !py-3"
                   size="large"
                   onClick={submit}
                 >
@@ -188,10 +187,8 @@ const Register = () => {
               )}
             </div>
             <p className="text-center mt-2 mb-8">
-              Already have an account?
-              <Link to="/login" className="text-hint">
-                Login
-              </Link>
+              Already have an account? {" "}
+              <Link to="/login" className="text-hint">Login</Link>
             </p>
           </div>
         </div>

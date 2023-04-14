@@ -4,10 +4,25 @@ import create from '../assets/icons/create.svg'
 import { TextField, Button } from '@mui/material';
 import NavigateNext from '@mui/icons-material/NavigateNext';
 import SkipNext from '@mui/icons-material/SkipNext';
+import useFetch from '../hooks/useFetch'
+import { endpoint } from '../utlis/endpoints';
 
 const Profile = () => {
 
     const navigate = useNavigate()
+
+    const settings = {
+        credentials: 'include',
+        headers: {
+            "Content-Type": "application/json",
+        }
+    };
+
+    const { data, loading, error } = useFetch(`${endpoint}/verify-user`, settings)
+
+    console.log(data)
+    console.log(loading)
+    console.log(error)
 
     return (
         <section className="bg-midWhite min-h-[100vh] px-4 py-4">
@@ -36,10 +51,10 @@ const Profile = () => {
                         <TextField id="outlined-basic" type="text" label="Genotype" variant="outlined" className="w-full" />
                     </div>
                     <div className="mt-4 flex items-center justify-between">
-                        <p>Why do we need this information, <span className="text-hint">Learn more</span></p> <Link to='/user-info'><Button variant="text" endIcon={<SkipNext/>}>Skip</Button></Link>
+                        <p>Why do we need this information, <span className="text-hint">Learn more</span></p> <Link to='/user-info'><Button variant="text" endIcon={<SkipNext />}>Skip</Button></Link>
                     </div>
                     <div className="mt-4 mb-8">
-                        <Button variant="contained" className="w-full" size="large" endIcon={<NavigateNext/>}>Next</Button>
+                        <Button variant="contained" className="w-full" size="large" endIcon={<NavigateNext />}>Next</Button>
                     </div>
                 </div>
 
