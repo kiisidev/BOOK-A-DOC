@@ -18,9 +18,11 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState(null);
 
+  const [toast, setToast] = useState({ show: false, message: '' })
+
   const settings = {
     method: "post",
-    withCredentials: true,
+    credentials: 'include',
     headers: {
       "Content-Type": "application/json",
     },
@@ -37,13 +39,19 @@ const Login = () => {
         setErrors(null);
         toasts.success(data.success);
         navigate('/login')
-      } else {
+      } else if(data.error) {
         console.log("Error", data);
         setErrors(data.error);
         setToast((prev) => ({
           ...prev,
           show: true,
           message: "Stop breaking rules!",
+        }));
+      }else{
+        setToast((prev) => ({
+          ...prev,
+          show: true,
+          message: data.server_err,
         }));
       }
       setLoading(false);
@@ -53,7 +61,12 @@ const Login = () => {
     }
   };
 
+  const handleClose = () => {
+    setToast(prev => ({...prev, show: false}));
+  };
+
   return (
+    <>
     <section className="bg-midWhite min-h-[100vh] px-4 py-4">
       <div className="max-w-3xl mx-auto">
         <div className="py-0.5">
@@ -61,8 +74,7 @@ const Login = () => {
             className="material-symbols-outlined cursor-pointer"
             onClick={() => navigate(-1)}
           >
-            {" "}
-            undo{" "}
+            undo
           </span>
         </div>
 
@@ -103,13 +115,13 @@ const Login = () => {
           </div>
           <div className="mt-8">
             {loading ? (
-              <Button variant="contained" className="w-full" size="large">
+              <Button variant="contained" className="w-full !py-3" size="large">
                 <CircularProgress size={26} sx={{ color: () => "#fff" }} />
               </Button>
             ) : (
               <Button
                 variant="contained"
-                className="w-full !py-4"
+                className="w-full !py-3"
                 size="large"
                 onClick={submit}
               >
@@ -126,6 +138,15 @@ const Login = () => {
         </div>
       </div>
     </section>
+    <Snackbar
+      autoHideDuration={3000}
+      open={toast.show}
+      onClose={handleClose}
+      TransitionComponent={Slide}
+      message={toast.message}
+      key={Slide.name}
+    />
+    </>
   );
 };
 

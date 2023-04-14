@@ -12,7 +12,7 @@ const Profile = () => {
     const navigate = useNavigate()
 
     const settings = {
-        withCredentials: true,
+        credentials: 'include',
         headers: {
             "Content-Type": "application/json",
         }
